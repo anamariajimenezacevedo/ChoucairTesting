@@ -1,10 +1,10 @@
 ##** Choucair Testing 
 
 Introducción 🚀
-_Automatización de la página web choucairtesting.com
+_Automatización de la página web choucairtesting.com de la secciòn servicios
 
 Descripción y contexto📝
-Página Web, que permite .......
+Página Web, que permite seleccionar varias opciones como servicios, en la cuàl se encuentran màs opciones como Portafolio de Soluciones que nos redirecciona a la misma pàgina y nos muestra respectiva informaciòn.
 
 Pre-requisitos📋
 -Java v1.8 update 151 o superior y JDK (variables de entorno configuradas) -Eclipse IDE o IntelliJ IDEA -Gradle v4.10.2 o superior (variables de entorno configuradas) Cucumber
@@ -25,16 +25,16 @@ Para correr el proyecto se necesita Java JDK 1.8 y Gradle con la versión 5.6.1
 
 ▶️ Ejecutar el runner.
 Pruebas End-To-End 🔛
-Con esta automatización se realiza xxxxxxx, para después MMMMM ; Una vez MMMMMMM, acción. 
+Con esta automatización se realiza la selecciòn de opcion servicios, para después validar las diferentes opciones de dicha secciòn; Una vez seleccionada cada una de las opciones, se validarà que nos redireccione a la informaciòn correcta de dicha opciòn. 
 
 Detalles Generales De La Implementación 💻
-Cada línea de los escenarios de pruebas creados en el feature bajo lenguaje Gherkin, se conectan con un método de las clases StepDefinitions con la ayuda de anotaciones @Given, @When y @Then, desde el StepDefinitions se conectan con las clases tipo Task donde se realizan las acciones de alto nivel  y desde las cuales se pueden invocar clases tipo Interactions en las cuales se realizan acciones de bajo nivel (p. ej. Scroll).
+Cada línea de los escenarios de pruebas creados en el feature bajo lenguaje Gherkin, se conectan con un método de las clases StepDefinitions con la ayuda de anotaciones @Given, @When y @Then, desde el StepDefinitions se conectan con las clases tipo StepDefinitions donde se realizan las acciones de alto nivel  y el mapeo de los elementos, desde las cuales se pueden realizar metodos en los cuales se realizan diferentes acciones (p. ej. Scroll).
 
 🚧 La estructura completa del proyecto es la siguiente:
 src/test/java 
 -co.com.choucair.testchoucair.runners: Runners para ejecutar la automatización con los escenarios indicados en el feature.
 -co.com.choucair.testchoucair.stepdefinitions: Clases que son el punto de entrada del feature para traducir de lenguaje natural a lenguaje máquina y así permitir la ejecución de la automatización.
--co.com.choucair.testchoucair.steps:Clases que realizan las acciones de alto nivel.
+-co.com.choucair.testchoucair.steps: Clases que realizan las acciones de alto nivel.
 -co.com.choucair.testchoucair.userinterface: Clases donde se mapean los elementos de la interfaz de usuario y a su vez para la interacción con cada uno de estos elementos.
 
 src/test/resources
@@ -45,12 +45,10 @@ src/test/resources
 Construido Con 🛠️
 La automatización fue desarrollada con:
 
-BDD - Estrategia de desarrollo
 POM - Patrón de diseño
 Gradle - Gestor de dependencias
 Selenium Web Driver - Herramienta para automatizar acciones en navegadores web
-Cucumber - Herramienta para automatizar pruebas BDD
-Serenity BDD - Biblioteca de código abierto para la generación de reportes
+Cucumber - Herramienta para interpretar lenguage Gherkin
 Gherkin - Lenguaje Business Readable DSL (Lenguaje especifico de dominio legible por el negocio)
 Versionado 📌
 Se uso GIT para el control de versiones, aplicando GitFlow 🔀
