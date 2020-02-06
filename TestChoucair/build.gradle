@@ -1,0 +1,43 @@
+group 'co.com.choucair.TestChoucair'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.48")
+    }
+}
+
+ext{
+    serenityVersion = '2.0.48'
+    serenityCucumberVersion = '1.9.4'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.slf4j:slf4j-api:1.7.25"
+    testImplementation "org.slf4j:slf4j-jdk14:1.7.25"
+    testImplementation "org.apache.logging.log4j:log4j-core:2.12.1"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+
+}
+
+gradle.startParameter.continueOnFailure = true
